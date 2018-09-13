@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDF1F3">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"></include>
+
+    <EditText
+        android:id="@+id/edt_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:background="@color/white_color"
+        android:padding="@dimen/_5sdp"
+        android:hint="Enter Code" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_below="@+id/edt_code"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <EditText
+            android:id="@+id/edt_subject"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:hint="Enter Subject"
+            android:paddingLeft="@dimen/_15sdp"
+            android:singleLine="true"
+            android:textColor="#6d6e71"
+            android:background="#EDF1F3"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_11sdp"
+            />
+
+        <Spinner
+            android:id="@+id/spnColors"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:backgroundTint="@color/colorPrimary"
+            android:entries="@array/colors"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_plus"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_layout"
+        android:background="@drawable/btn"
+        android:textColor="@color/white_color"
+        android:text="+"
+        android:textSize="@dimen/_30sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        />
+
+    <Button
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:id="@+id/btn_minus"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_layout"
+        android:layout_toEndOf="@+id/btn_plus"
+        android:width="@dimen/_150sdp"
+        android:background="@drawable/btn"
+        android:textSize="@dimen/_30sdp"
+        android:textColor="@color/white_color"
+        android:text="-" />
+
+
+    <RelativeLayout
+        android:id="@+id/edt_comment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_250sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/commentbck"
+        android:layout_below="@+id/btn_plus"
+        >
+
+    <EditText
+        android:padding="@dimen/_10sdp"
+        android:id="@+id/edt_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:background="@null"
+        />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/btn"
+        android:text="@string/add"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/_15sdp"
+        android:layout_alignParentBottom="true"
+        android:textStyle="bold" />
+
+</RelativeLayout>
